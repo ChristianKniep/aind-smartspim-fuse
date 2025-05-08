@@ -108,6 +108,7 @@ def build_parallel_command(params: dict, tool: PathLike) -> str:
     additional_params = ""
     hostfile = ""
     n_procs = cpu_params["number_processes"]
+    print(f"Number of processes: {n_procs}")
 
     # Additional params provided in the configuration
     if len(cpu_params["additional_params"]):
