@@ -108,7 +108,7 @@ def build_parallel_command(params: dict, tool: PathLike) -> str:
     additional_params = ""
     hostfile = ""
     n_procs = cpu_params["number_processes"]
-    print(f"Number of processes: {n_procs}")
+    
 
     # Additional params provided in the configuration
     if len(cpu_params["additional_params"]):
@@ -496,7 +496,7 @@ def main(
     ]
     zarr_chunksize = [128, 128, 128]
     n_workers = int(utils.get_code_ocean_cpu_limit())
-
+    n_workers = 48
     (
         file_convert_start_time,
         file_convert_end_time,
